@@ -13,4 +13,8 @@ public class StudentController {
         this.studentModel = new StudentModel(context);
         this.studentView = studentView;
     }
+
+    public void getStudents(){
+        studentView.showStudentList(studentModel.getStudentList());
+    }
 }

@@ -1,4 +1,4 @@
-package com.demo.mvc;
+package com.demo.mvc.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -15,5 +15,11 @@ public class MainActivity extends AppCompatActivity {
         studentView = new StudentView(MainActivity.this, null);
         setContentView(studentView.getRootView());
         studentView.initView();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        studentView.loadStudentList();
     }
 }
